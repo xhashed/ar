@@ -9,7 +9,7 @@ class ARViewer {
 
   showAR() {
     const modelViewer = document.createElement("model-viewer");
-    modelViewer.setAttribute("src", "/model.gltf");
+    modelViewer.setAttribute("src", "model.gltf");
     modelViewer.setAttribute("ar", "");
     modelViewer.setAttribute("ar-modes", "scene-viewer quick-look");
     modelViewer.setAttribute("camera-controls", "");
@@ -24,5 +24,6 @@ class ARViewer {
       modelViewer.activateAR();
     }, 500);
   }
+}
 
 new ARViewer();
