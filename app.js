@@ -3,6 +3,17 @@ class ARViewer {
     this.init();
   }
 
+  showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.remove();
+    }, 4000);
+  }
+
   init() {
     this.showAR();
   }
@@ -20,8 +31,16 @@ class ARViewer {
 
     document.body.appendChild(modelViewer);
 
+    modelViewer.addEventListener("error", () => {
+      this.showToast("Ошибка загрузки модели");
+    });
+
     setTimeout(() => {
-      modelViewer.activateAR();
+      if (modelViewer.canActivateAR) {
+        modelViewer.activateAR();
+      } else {
+        this.showToast("AR не поддерживается на этом устройстве");
+      }
     }, 500);
   }
 }

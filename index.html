@@ -15,7 +15,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background: #000;
+            background: #ffffff;
         }
         model-viewer {
             position: fixed;
@@ -23,7 +23,31 @@
             height: 100%;
             top: 0;
             left: 0;
-            background: #000;
+            background: #ffffff;
+        }
+        .toast {
+            position: fixed;
+            bottom: 14px;
+            right: 14px;
+            background: #FC4C00;
+            color: white;
+            padding: 14px 14px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            z-index: 9999;
+            animation: slideIn 0.2s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(24px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
