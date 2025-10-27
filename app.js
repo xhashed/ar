@@ -26,7 +26,7 @@ class ARViewer {
     modelViewer.setAttribute("camera-controls", "");
     modelViewer.setAttribute("shadow-intensity", "1");
     modelViewer.setAttribute("auto-rotate", "");
-    modelViewer.setAttribute("ios-src", "/model.usdz");
+    modelViewer.setAttribute("ios-src", "model.usdz");
     modelViewer.setAttribute("scale", "0.25 0.25 0.25");
 
     document.body.appendChild(modelViewer);
